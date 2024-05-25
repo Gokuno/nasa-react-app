@@ -4,15 +4,20 @@ import Main from "./components/Main"
 import Footer from "./components/Footer"
 
 function App() {
+  const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
   const [showModal, setShowModal] = useState(false)
+
+function handleToggleModal() {
+  setShowModal(!showModal)
+}
 
   return (
     <>
       <Main />
       {showModal && (
-        <SideBar />
+        <SideBar handleToggleModal={handleToggleModal} />
       )}
-      <Footer />
+      <Footer handleToggleModal={handleToggleModal} />
       
     </>
   )

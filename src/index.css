@@ -42,7 +42,6 @@ footer {
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem;
@@ -118,6 +117,11 @@ footer button:hover {
   background: #030615;
 }
 
+.sidebarContent h2 {
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
 .sidebarContent div {
   flex: 1;
 }
@@ -128,6 +132,13 @@ footer button:hover {
   border: none;
   outline: none;
   margin-right: auto;
+  cursor: pointer;
+  transition-duration: 200ms;
+  padding: 1rem;
+}
+
+.sidebarContent button:hover {
+  opacity: 0.6;
 }
 
 @media (min-width: 640px) {
@@ -135,10 +146,18 @@ footer button:hover {
     position: relative;
     inset: unset;
     min-width: 30%;
+    max-width: 100vh;
     box-shadow: 0 0 40px 1px #030615;
   }
 
   .sidebarContent {
     margin: unset;
+    width: 100%;
+  }
+
+  .bgOverlay {
+    right: 0;
+    left: unset;
+    width: 100vw;
   }
 }
