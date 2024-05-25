@@ -50,6 +50,7 @@ footer {
 footer div {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 footer h2 {
@@ -134,11 +135,22 @@ footer button:hover {
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContent button:hover {
   opacity: 0.6;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dateTitle {
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 .loadingState {
